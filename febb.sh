@@ -1,4 +1,4 @@
-
+#!/bin/bash
 #directly pass port since no quotation issues
 username= cat config.json | jq .username
 password= cat config.json | jq .password
