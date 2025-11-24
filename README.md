@@ -7,7 +7,7 @@
 
 - Create and log into CodeSpaces account at https://codesandbox.io/
 - Make new Codebox, with the selected language of Docker
-- In the top right corner of the Codebox, fork it
+- Navigate to the terminal and press enter, this should close it. Repeat this action to actually get into the shell.
 - Run the following command in the terminal once connected: `git clone https://github.com/esse-est/FEBB && cd FEBB && ./febb.sh`
 
 #### Github Codespaces (infinite free):
