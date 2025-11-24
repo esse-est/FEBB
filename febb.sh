@@ -20,7 +20,7 @@ else
   -e PASSWORD=${password} \
   -p 3000:3000 \
   -p 3001:3001 \
-  -v /workspaces/FEBB/firefox_config:/config \
+  -v firefox_config:/config \
   --shm-size="1gb" \
   --restart unless-stopped \
   lscr.io/linuxserver/firefox:latest
