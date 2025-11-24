@@ -2,5 +2,6 @@
     "username": "user",
     "password": "password",
     "port": 3000,
-    "dev_port": 3001
+    "dev_port": 3001,
+    "seccomp": "unconfined"
 }
