@@ -5,7 +5,7 @@ password= cat config.json | jq .password
 port= cat config.json | jq .port
 dev_port= cat config.json | jq .port
 security_mode= cat config.json | jq .seccomp
-if [[ $(echo -n $(docker ps -q) | wc -m) != 0 ]]; then
+if [[ $(echo -n $(docker ps -qf name="firefox") | wc -m) != 0 ]]; then
   #reopen port in gh workspace
   docker stop firefox
   docker start firefox -i
