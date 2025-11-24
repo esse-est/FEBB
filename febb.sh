@@ -17,11 +17,11 @@ else
   -e PGID=1000 \
   -e TZ=Etc/UTC \
   -e FIREFOX_CLI=https://www.linuxserver.io/ `#optional` \
-  -e seccomp=$(security_mode) \
-  -e CUSTOM_USER=$(username) \
-  -e PASSWORD=$(password) \
-  -p $(port):$(port) \
-  -p $(dev_port):$(dev_port) \
+  -e seccomp=${security_mode} \
+  -e CUSTOM_USER=${username} \
+  -e PASSWORD=${password} \
+  -p ${port}:${port} \
+  -p ${dev_port}:${dev_port} \
   -v /workspaces/FEBB/firefox_config:/config \
   --shm-size="1gb" \
   --restart unless-stopped \
