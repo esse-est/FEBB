@@ -2,8 +2,6 @@
 #directly pass port since no quotation issues
 username= cat config.json | jq .username
 password= cat config.json | jq .password
-port= cat config.json | jq .port
-dev_port= cat config.json | jq .dev_port
 security_mode= cat config.json | jq .seccomp
 if [[ $(echo -n $(docker ps -qf name="firefox") | wc -m) != 0 ]]; then
   #reopen port in gh workspace
@@ -20,8 +18,8 @@ else
   -e seccomp=${security_mode} \
   -e CUSTOM_USER=${username} \
   -e PASSWORD=${password} \
-  -p ${port}:${port} \
-  -p ${dev_port}:${dev_port} \
+  -p 3000:3000 \
+  -p 3001:3001 \
   -v /workspaces/FEBB/firefox_config:/config \
   --shm-size="1gb" \
   --restart unless-stopped \
