@@ -3,7 +3,7 @@
 username= cat config.json | jq .username
 password= cat config.json | jq .password
 port= cat config.json | jq .port
-dev_port= cat config.json | jq .port
+dev_port= cat config.json | jq .dev_port
 security_mode= cat config.json | jq .seccomp
 if [[ $(echo -n $(docker ps -qf name="firefox") | wc -m) != 0 ]]; then
   #reopen port in gh workspace
